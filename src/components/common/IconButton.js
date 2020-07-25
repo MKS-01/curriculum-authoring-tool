@@ -6,6 +6,7 @@ import {
   FaTrashAlt,
   FaArrowsAlt,
 } from 'react-icons/fa';
+
 export default function IconButton() {
   return (
     <div className='icon-button'>

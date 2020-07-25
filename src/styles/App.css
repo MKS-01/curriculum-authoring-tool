@@ -71,6 +71,14 @@
   background-color: #f5f5f5;
 }
 
+.row-input {
+  display: flex;
+}
+
+.row-input-field {
+  width: 100%;
+}
+
 /*-----icon  btn-----*/
 .icon-button button {
   border: 0;

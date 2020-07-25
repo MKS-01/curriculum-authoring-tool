@@ -1,5 +1,6 @@
 import React from 'react';
 import IconButton from '../common/IconButton';
+import EditableInput from './EditableInput';
 
 function Row() {
   return (
@@ -10,7 +11,12 @@ function Row() {
       <div className='row-box'>
         <div>-</div>
       </div>
-      <div className='row-input'> Numbers</div>
+      <div className='row-input'>
+        <EditableInput
+
+        // placeholder='Number'
+        />
+      </div>
     </li>
   );
 }
