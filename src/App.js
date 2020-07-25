@@ -1,8 +1,9 @@
 import React from 'react';
 import './styles/App.css';
-import AddStandardBtn from './button/add';
+import AddStandardBtn from './components/button/add';
 import HeaderRow from './components/header';
 import Row from './components/row';
+import Title from './components/common/Title';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <header className='App-header'></header>
 
       <div className='parent'>
+        <Title title={'MATHEMATICS'} />
         <HeaderRow />
         <Row />
 

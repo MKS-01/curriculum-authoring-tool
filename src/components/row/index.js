@@ -1,14 +1,17 @@
 import React from 'react';
+import IconButton from '../common/IconButton';
 
 function Row() {
   return (
-    <div className='row'>
-      <div className='row-icon'>icon</div>
+    <li className='row'>
+      <div className='row-icon'>
+        <IconButton />
+      </div>
       <div className='row-box'>
         <div>-</div>
       </div>
       <div className='row-input'> Numbers</div>
-    </div>
+    </li>
   );
 }
 
