@@ -6,8 +6,7 @@ function HeaderRow() {
       <div>
         <p>
           <b>Actions</b>
-        </p>
-        <p>
+          <br />
           <small>
             {' '}
             Move, Ident, <br />
@@ -18,8 +17,7 @@ function HeaderRow() {
       <div className='header-section-two'>
         <p>
           <b>Standard</b>
-        </p>
-        <p>
+          <br />
           <small>The text of the standard</small>
         </p>
       </div>
