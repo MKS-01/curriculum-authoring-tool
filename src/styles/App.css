@@ -1,0 +1,28 @@
+.App {
+  text-align: center;
+  display: flex;
+}
+
+.parent {
+  display: flex;
+  margin: auto;
+  height: 200px;
+  width: 80%;
+  /* background-color: yellow; */
+  align-items: center;
+}
+
+/*-----add standard btn-----*/
+.add-btn {
+  /* display: flex; */
+  flex: 1;
+}
+
+.add-btn button {
+  height: 40px;
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  background-color: royalblue;
+  color: white;
+}
