@@ -24,7 +24,7 @@ function Row(props) {
                 <div>-</div>
               </div>
               <div className='row-input'>
-                <EditableInput />
+                <EditableInput data={{ currentPos: value, indexPos: index }} />
               </div>
             </div>
           </div>
