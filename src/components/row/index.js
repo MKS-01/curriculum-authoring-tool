@@ -15,7 +15,13 @@ function Row(props) {
         }
 
         return (
-          <div className='row' key={index.toString()}>
+          <div
+            className='row'
+            draggable={true}
+            onDragOver={(e) => {
+              console.log('drag', e);
+            }}
+            key={index.toString()}>
             <div className='row-icon'>
               <IconButton data={{ currentPos: value, indexPos: index }} />
             </div>
