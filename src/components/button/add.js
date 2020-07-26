@@ -5,15 +5,18 @@ import { useStateValue } from '../../store';
 const AddStandardBtn = () => {
   const [{ rowPosition }, dispatch] = useStateValue();
 
-  console.log('uodate pos', rowPosition);
   return (
     <div className='add-btn'>
       <button
-        // onClick={addRow}
         onClick={() =>
           dispatch({
             type: 'addRow',
-            newRowPos: [...rowPosition, 1],
+            newRowPos: [
+              ...rowPosition,
+              rowPosition.length >= 1 && rowPosition !== null
+                ? rowPosition[rowPosition.length - 1]
+                : 0,
+            ],
           })
         }>
         {' '}
@@ -21,15 +24,6 @@ const AddStandardBtn = () => {
       </button>
     </div>
   );
-
-  // function addRow() {
-  //   console.log('check');
-
-  //   dispatch({
-  //     type: 'addRow',
-  //     newRowPos: [...rowPosition, 1],
-  //   });
-  // }
 };
 
 export default AddStandardBtn;

@@ -9,6 +9,7 @@ import { StateProvider } from './store';
 const App = () => {
   const initialState = {
     rowPosition: [0, 1, 1],
+    // rowPosition: [],
 
     currentPos: 0,
   };
