@@ -10,14 +10,12 @@ function Row(props) {
   return (
     <React.Fragment>
       {rowPosition.map((value, index) => {
-        console.log(value, index);
-
         if (value.length < 1 && value === null) {
           return <div />;
         }
 
         return (
-          <div className='row' key={index}>
+          <div className='row' key={index.toString()}>
             <div className='row-icon'>
               <IconButton data={{ currentPos: value, indexPos: index }} />
             </div>

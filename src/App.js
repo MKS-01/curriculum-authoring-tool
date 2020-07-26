@@ -8,9 +8,8 @@ import { StateProvider } from './store';
 
 const App = () => {
   const initialState = {
-    rowPosition: [0, 1, 1],
-    // rowPosition: [],
-
+    // rowPosition: [0, 1, 1],
+    rowPosition: [],
     currentPos: 0,
   };
 
@@ -25,7 +24,7 @@ const App = () => {
       case 'updateCurrentPos':
         return {
           ...state,
-          currentPos: action.newRowPos,
+          rowPosition: action.newCurrentPos,
         };
 
       default:
