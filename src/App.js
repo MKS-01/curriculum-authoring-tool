@@ -4,26 +4,47 @@ import AddStandardBtn from './components/button/add';
 import HeaderRow from './components/header';
 import Row from './components/row';
 import Title from './components/common/Title';
+import { StateProvider } from './store';
 
-function App() {
+const App = () => {
+  const initialState = {
+    rowPosition: [0, 1, 1],
+
+    currentPos: 0,
+  };
+
+  const reducer = (state, action) => {
+    switch (action.type) {
+      case 'addRow':
+        return {
+          ...state,
+          rowPosition: action.newRowPos,
+        };
+
+      case 'updateCurrentPos':
+        return {
+          ...state,
+          currentPos: action.newRowPos,
+        };
+
+      default:
+        return state;
+    }
+  };
+
   return (
-    <div className='App'>
-      <header className='App-header'></header>
-
-      <div className='parent'>
-        <Title title={'MATHEMATICS'} />
-        <HeaderRow />
-        <Row position={0} />
-
-        <Row position={1} />
-
-        <Row position={1} />
-        <Row position={2} />
-
-        <AddStandardBtn />
+    <StateProvider initialState={initialState} reducer={reducer}>
+      <div className='App'>
+        <header className='App-header'></header>
+        <div className='parent'>
+          <Title title={'MATHEMATICS'} />
+          <HeaderRow />
+          <Row />
+          <AddStandardBtn />
+        </div>
       </div>
-    </div>
+    </StateProvider>
   );
-}
+};
 
 export default App;

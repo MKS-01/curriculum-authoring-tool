@@ -1,26 +1,38 @@
-import React, { useState } from 'react';
+import React from 'react';
 import IconButton from '../common/IconButton';
 import EditableInput from './EditableInput';
+import { useStateValue } from '../../store';
 
 function Row(props) {
-  // const [position, setPosition] = useState(props.position);
-
-  const { position } = props;
+  // eslint-disable-next-line no-unused-vars
+  const [{ rowPosition }, dispatch] = useStateValue();
 
   return (
-    <li className='row'>
-      <div className='row-icon'>
-        <IconButton />
-      </div>
-      <div className={'row-move-' + position}>
-        <div className={'row-box'}>
-          <div>-</div>
-        </div>
-        <div className='row-input'>
-          <EditableInput />
-        </div>
-      </div>
-    </li>
+    <React.Fragment>
+      {rowPosition.map((value, index) => {
+        console.log(value, index);
+
+        if (value.length < 1 && value === null) {
+          return <div />;
+        }
+
+        return (
+          <div className='row' key={index}>
+            <div className='row-icon'>
+              <IconButton />
+            </div>
+            <div className={'row-move-' + value}>
+              <div className={'row-box'}>
+                <div>-</div>
+              </div>
+              <div className='row-input'>
+                <EditableInput />
+              </div>
+            </div>
+          </div>
+        );
+      })}
+    </React.Fragment>
   );
 }
 
