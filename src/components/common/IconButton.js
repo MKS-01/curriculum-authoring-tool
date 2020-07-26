@@ -7,19 +7,29 @@ import {
   FaArrowsAlt,
 } from 'react-icons/fa';
 
+const move = () => {
+  console.log('1');
+};
+
+const indent = () => {};
+
+const outdent = () => {};
+
+const remove = () => {};
+
 export default function IconButton() {
   return (
     <div className='icon-button'>
-      <button>
+      <button onClick={move}>
         <FaArrowsAlt />
       </button>
-      <button>
+      <button onClick={indent}>
         <FaArrowLeft />
       </button>
-      <button>
+      <button onClick={outdent}>
         <FaArrowRight />
       </button>
-      <button>
+      <button onClick={remove}>
         <FaTrashAlt />
       </button>
     </div>

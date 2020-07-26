@@ -13,10 +13,12 @@ function App() {
       <div className='parent'>
         <Title title={'MATHEMATICS'} />
         <HeaderRow />
-        <Row />
+        <Row position={0} />
 
-        <Row />
-        <Row />
+        <Row position={1} />
+
+        <Row position={1} />
+        <Row position={2} />
 
         <AddStandardBtn />
       </div>

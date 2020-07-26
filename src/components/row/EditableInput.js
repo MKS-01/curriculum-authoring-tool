@@ -4,9 +4,9 @@ const EditableInput = (props) => {
   const inputRef = useRef(null);
   const [inputVisible, setInputVisible] = useState(false);
   const [text, setText] = useState('Numbers');
-  const [placeholder, setPlacholder] = useState(
-    'Type standard here (e.g. Numbers)'
-  );
+  // const [placeholder, setPlacholder] = useState(
+  //   'Type standard here (e.g. Numbers)'
+  // );
 
   function onClickOutSide(e) {
     if (inputRef.current && !inputRef.current.contains(e.target)) {
@@ -29,7 +29,7 @@ const EditableInput = (props) => {
       {inputVisible ? (
         <input
           className='row-input-field'
-          placeholder={placeholder}
+          // placeholder={placeholder}
           ref={inputRef} // Set the Ref
           value={text} // Now input value uses local state
           onChange={(e) => {
