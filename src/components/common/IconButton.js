@@ -11,13 +11,20 @@ const move = () => {
   console.log('1');
 };
 
-const indent = () => {};
+// const indent = () => {};
 
 const outdent = () => {};
 
 const remove = () => {};
 
-export default function IconButton() {
+export default function IconButton(props) {
+  // console.log('oprp', props);
+  const { currentPos, index } = props.data;
+
+  function indent() {
+    console.log('currentPos', currentPos);
+  }
+
   return (
     <div className='icon-button'>
       <button onClick={move}>

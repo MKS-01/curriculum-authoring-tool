@@ -19,7 +19,7 @@ function Row(props) {
         return (
           <div className='row' key={index}>
             <div className='row-icon'>
-              <IconButton />
+              <IconButton data={{ currentPos: value, indexPos: index }} />
             </div>
             <div className={'row-move-' + value}>
               <div className={'row-box'}>
